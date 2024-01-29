@@ -137,6 +137,10 @@ main{
     width: 100%;
 }
 
+.mobile{
+    display: none;
+}
+
 .main-info-wraper{
     
     display: flex;
