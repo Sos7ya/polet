@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Hero New";
+    src: url("../assets/Hero\ New\ Regular.otf");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,9 +10,17 @@
     text-decoration: none;
     list-style: none;
     color: white;
+    font-size: 20px;
+    font-family: "Hero New";
 }
 
+h1, h2{
+    font-size: 34px;
+}
 
+h2{
+    color: #011853;
+}
 
 a{
     color: white;
@@ -69,6 +82,16 @@ label{
     color: white;
 }
 
+.input-wraper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#burger-btn{
+    display: none;
+}
+
 input{
     padding: 10px 30px;
     border-radius: 10px;
@@ -78,6 +101,7 @@ input{
     background-position: 7px center;
     background-repeat: no-repeat;
     background-size: 18px;
+    color: #000;
 }
 
 .logo-wrapper{
@@ -114,7 +138,7 @@ main{
 }
 
 .main-info-wraper{
-    padding-left: 150px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,7 +148,8 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    padding: 100px 0;
+    padding-left: 150px;
 }
 
 .text-wrapper{
@@ -154,6 +179,12 @@ main{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.text-wrapper button:hover{
+    background-color: #011853;
+    color: white;
+    text-decoration: underline;
 }
 
 .inner-text-wrapper{
@@ -207,9 +238,15 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    gap: 15px;
 }
 .news-item p{
     color: black;
+}
+
+.news-item h3:hover{
+    text-decoration: underline;
 }
 
 .news-logo-wrapper{
@@ -217,9 +254,29 @@ main{
     height: 30%;
 }
 
+.news-date{
+    align-self: flex-start;
+}
+
 .news-logo-wrapper img{
     width: 100%;
-    height: 100%;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.more-btn{
+    align-self: center;
+    background-color: #011853;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    max-width: 310px;
+    cursor: pointer;
+}
+
+.more-btn:hover{
+    background-color: #00123F;
+    text-decoration: underline;
 }
 
 .production-wrapper{
@@ -270,6 +327,45 @@ main{
 .production-logo-wrapper img{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+}
+
+.contacts-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.contacts-wrapper * {
+    color: #00123F;
+}
+
+.contacts-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.main-contacts ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacts-info-wrapper h3{
+    color: #00123F;
+    font-size: 22px;
+}
+
+.metro-logo{
+    width: 25px;
+    margin-right: 20px;
 }
 
 .map-wrapper{
@@ -278,15 +374,207 @@ main{
     align-items: center;
     justify-content: center;
     width: 730px;
-    height: 832px;
+    height: 800px;
+}
+
+.section-partners{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: end;
+    margin-bottom: 100px;
+}
+
+.partner-logo{
+    width: 400px;
+}
+
+.partner-logo img{
+    width: 100%;
 }
 
 footer{
-    height: 850px;
+    padding: 100px;
+    background-color: #00123F;
+}
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-wrapper *{
+    color: white;
+    font-size: 20px;
+}
+
+.footer-firstLine{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 40px;
+}
+
+.footer-firstLine ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo{
+    width: 466px;
+    height: 114px;
+}
+
+.footer-logo img{
     width: 100%;
-    background-color: #00123F;
+}
+
+.footer-navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-navigation *{
+    font-size: 26px;
+}
+
+@media (max-width:1000px){
+    *, a{
+        font-size: 14px;
+    }
+
+    h1, h2{
+        font-size: 20px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    .first-line-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-wrapper{
+        width: 280px;
+    }
+    .search-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-around;
+    }
+
+    #burger-btn {
+        display: flex;
+        width: 56px;
+        height: 56px;
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #burger-btn.close{
+        background-image: url('../assets/burger-menu.png');
+    }
+
+    #burger-btn.open{
+        background-image: url('../assets/burger-close.png');
+    }
+
+    input{
+        width: 200px;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .navigation h2{
+        color: white;
+    }
+
+    .active{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .hiden{
+        display: none;
+    }
+
+    .navigation-list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .contact-list{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-info-wraper{
+        padding: 30px;
+    }
+
+    .production-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news-wrapper{
+        overflow: hidden;
+    }
+
+    .production-discription{
+        display: flex;
+        width: auto;
+        height: auto;
+    }
+
+    .map-wrapper{
+        width: 100%;
+        height: 400px;
+    }
+
+    .contacts-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-wrapper{
+        justify-content: right;
+    }
+
+    .footer-logo{
+        width: 248px;
+        height: 60px;
+    }
+
+    .footer-secondLine{
+        display: none;
+    }
+
+    .footer-hotline{
+        width: 194px;
+    }
+
+    .footer-hotline img{
+        width: 100%;
+    }
 }

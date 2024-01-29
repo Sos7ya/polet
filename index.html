@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <title>НПП ПОЛЕТ</title>
+    <script src="./src/script.js" async="false"></script>
+    <title>НПП  ПОЛЕТ</title>
 </head>
 
 <body>
@@ -15,8 +16,12 @@
                 <a href="#"><img src="/assets/logo.png" alt="logo"></a>
             </div>
             <div class="search-wrapper">
-                <label for="search"><a href="#">карта сайта</a></label>
-                <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+                <div id="burger-btn" class="close"></div>
+                <div class="input-wraper">
+                    <label for="search"><a href="#">карта сайта</a></label>
+                    <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+                </div>
+                
             </div>
         </div>
         <nav class="navigation">
@@ -32,8 +37,25 @@
     </header>
     <main>
         <section class="main-info-wraper">
-            <div class="text-wrapper">
-                <h2>Наши разработки – полет в будущее</h2>
+            <nav id="nav-Menu" class="navigation">
+                <ul class="navigation-list">
+                    <li><a href="#">О предприятии</a></li>
+                    <li><a href="#">Руководство. Контакты</a></li>
+                    <li><a href="#">Продукция</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Научная деятельность</a></li>
+                    <li><a href="#">Новости</a></li>
+                </ul>
+                <ul class="contact-list">
+                    <li><h2>Научно-производственное предприятие "Полет"</h2></li>
+                    <li><strong>Адрес:</strong> пл. Комсомольская, д. 1, г. Нижний Новгород, 603950</li>
+                    <li><strong>Телефон:</strong><a href="tel: +7 (831) 245-21-04"> (831) 245-21-04</a></li>
+                    <li><strong>Факс:</strong>  (831) 249-39-4</li>
+                    <li><strong>Электронная почта:</strong><a href="mailto: mail@npp-polyot.ru">mail@npp-polyot.ru</a></li>
+                </ul>
+            </nav>
+            <div id="main-info" class="text-wrapper">
+                <h1>Наши разработки – полет в будущее</h1>
                 <div class="inner-text-wrapper">
                     <p>Ведущее предприятие России по технике авиационной связи военного и гражданского назначения.
                         Основные виды продукции:
@@ -56,12 +78,12 @@
                         подразделения, производство, систему радиополигонов, сервисно-технические центры.
                     </p>
                 </div>
-                <button>Читать подробнее</button>
+                <button class="btn-more">Читать подробнее</button>
             </div>
         </section>
         <section class="second-section-wrapper">
             <div class="section-product">
-                <h3>Продукция</h3>
+                <h2>Продукция</h2>
                 <div class="production-wrapper">
                     <div class="production-discription">
                         <ul>
@@ -90,11 +112,11 @@
                 </div>
             </div>
             <div class="section-news">
-                <h3>Новости</h3>
-                <div class="news-wrapper">
-                    <div id="news-1" class="news-item">
+                <h2>Новости</h2>
+                <div id="news-wrapper" class="news-wrapper">
+                    <div id="news-1" class="slide news-item">
                         <div class="news-logo-wrapper"><img src="/assets/newsLogo1.png" alt="NEWs-logo"></div>
-                        <h3 class="news-1-date">8 ДЕКАБРЯ 2023</h3>
+                        <h3 class="news-date">8 ДЕКАБРЯ 2023</h3>
                         <a href="#">
                             <h3>«РОСТЕХ-ТЕХПРИЕМКА» ПРОВЕЛА АУДИТ НАУЧНО-ПРОИЗОДСТВЕННОГО ПРЕДПРИЯТИЯ «ПОЛЕТ»</h3>
                         </a>
@@ -102,9 +124,9 @@
                             требованиям межгосударственного стандарта. Выданный сертификат качества позволит НПП «Полет»
                             успешно работать в отрасли медицинского приборостроения</p>
                     </div>
-                    <div id="news-2" class="news-item">
+                    <div id="news-2" class="slide news-item">
                         <div class="news-logo-wrapper"><img src="/assets/newsLogo2.png" alt="NEWs-logo"></div>
-                        <h3 class="news-2-date">14 НОЯБРЯ 2023</h3>
+                        <h3 class="news-date">14 НОЯБРЯ 2023</h3>
                         <a href="">
                             <h3>«РОСЭЛЕКТРОНИКА» ДЕМОНСТРИРУЕТ НА DUBAI AIRSHOW НОВЫЕ КОМПЛЕКСЫ СВЯЗИ ДЛЯ ИСТРЕБИТЕЛЕЙ
                             </h3>
@@ -113,9 +135,9 @@
                             технологий и вычислительных систем. Его применение позволит повысить надежность,
                             разведзащищенность и помехоустойчивость каналов связи.</p>
                     </div>
-                    <div id="news-3" class="news-item">
+                    <div id="news-3" class="slide news-item">
                         <div class="news-logo-wrapper"><img src="/assets/newsLogo3.png" alt="NEWs-logo"></div>
-                        <h3 class="news-3-date">14 АВГУСТА 2023</h3>
+                        <h3 class="news-date">14 АВГУСТА 2023</h3>
                         <a href="">
                             <h3>НА ФОРУМЕ «АРМИЯ-2023» «РОСТЕХ» ПОКАЗАЛ КОМПАКТНЫЙ МОДЕМ С РАДИУСОМ ДЕЙСТВИЯ ДО 300 КМ
                             </h3>
@@ -125,9 +147,10 @@
                             установить надежный радиоканал для управления беспилотниками и обмена данными.</p>
                     </div>
                 </div>
+                <button class="more-btn">Читать больше новостей</button>
             </div>
             <div class="section-contacts">
-                <h3>Контакты</h3>
+                <h2>Контакты</h2>
                 <div class="contacts-wrapper">
                     <div class="map-contacts">
                             <div class="map-wrapper" style="position:relative;overflow:hidden;">
@@ -136,26 +159,81 @@
                                     style="position:relative;">
                                 </iframe>
                             </div>
-                        <div class="contacts-info-wrapper">
-                            <div class="main-contacts">
+                    </div>
+                    <div class="contacts-info-wrapper">
+                        <h3>"Научно-производственное предприятие "Полет"</h3>
+                        <div class="main-contacts">
+                            <ul class="main-contacts-address">
+                                <li><strong>Адрес:</strong> пл. Комсомольская, д. 1, г. Нижний Новгород, 603950</li>
+                                <li><img class="metro-logo" src="./assets/metro-logo.png" alt="M">Ленинская</li>
+                                <li><strong>Телефон:</strong><a href="tel:+7(831) 245-21-04"> (831) 245-21-04</a></li>
+                                <li><strong>Факс:</strong> (831) 249-39-41</li>
+                                <li><strong>Электронная почта:</strong> <a href="mailto:mail@npp-polyot.ru">mail@npp-polyot.ru</a></li>
+                            </ul>
 
-                            </div>
-                            <div class="secondary-contacts">
+                            <ul class="main-contacts-contacts">
+                                <li><strong>Генеральный директор</strong></li>
+                                <li>Комяков Алексей Владимирович</li>
+                                <li><strong>Телефон приемной:</strong><a href="tel:+7(831) 245-21-04"> (831) 245-21-04</a"></a></li>
+                            </ul>
 
-                            </div>
+                            <ul class="main-contacts-sells">
+                                <li><strong>Отдел поддержки продаж</strong></li>
+                                <li><strong>Телефон:</strong><a href="tel:+7(831) 244-86-33"> (831) 244-86-33</a></li>
+                                <li><strong>Телефон/Факс:</strong><a href="tel:+7(831) 245-24-60"> (831) 245-24-60</a></li>
+                                <li><strong>Электронная почта:</strong><a href="mailto:magniter@mail.ru"> magniter@mail.ru"></a></li>
+                            </ul>
+                            <ul class="main-contacts-tech">
+                                <li><strong>Отдел материально-технического обеспечения</strong></li>
+                                <li><strong>Телефон:</strong><a href="tel:+7(831) 244-86-83"> (831) 244-86-83</a></li>
+                            </ul>
+                            <ul class="main-contacts-employees">
+                                <li><strong>Отдел кадров</strong></li>
+                                <li><strong>Телефон:</strong><a href="tel:+7(831) 244-86-09"> (831) 244-86-09</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="additional-contacts">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
                 </div>
+            </div>
+            <div class="section-partners">
+                <div class="partner-logo"><img src="./assets/partLogo1.png" alt="RosTeh"></div>
+                <div class="partner-logo"><img src="./assets/partLogo2.png" alt="Rosel"></div>
+                <div class="partner-logo"><img style="filter: invert(1);" src="./assets/partLogo3.png" alt="Nia"></div>
             </div>
         </section>
     </main>
     <footer>
-        <div></div>
+        <div class="footer-wrapper">
+            <div class="footer-firstLine">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="logo">
+                </div>
+                <h3>Акционерное общество <br>Научно-производственное предприятие "Полет"</h3>
+                <ul>
+                    <li><strong>Адрес:</strong> пл. Комсомольская, д. 1, г. Нижний Новгород, 603950</li>
+                    <li><strong>Телефон:</strong><a href="tel: +7(831) 245-21-04"> (831) 245-21-04</a></li>
+                    <li><strong>Факс:</strong> (831) 249-39-41</li>
+                    <li><strong>Электронная почта:</strong><a href="mailto: mail@npp-polyot.ru"> mail@npp-polyot.ru</a></li>
+                </ul>
+                <div class="footer-hotline">
+                    <a href="#"><img src="./assets/hotline.png" alt="Горячая линия"></a>
+                </div>
+                <a href="#">Карта сайта</a>
+                <p><strong>Разработка сайта - </strong><a href="#">Сайт-НН</a></p>
+            </div>
+            <div class="footer-secondLine">
+                <nav>
+                    <ul class="footer-navigation">
+                        <li><a href="#">О предприятии</a></li>
+                        <li><a href="#">Руководство</a></li>
+                        <li><a href="#">Продукция</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Научная деятельность</a></li>
+                        <li><a href="#">Новости</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </footer>
 </body>
 
